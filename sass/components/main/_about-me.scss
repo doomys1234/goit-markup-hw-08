@@ -1,0 +1,43 @@
+/* ABOUT ME SECTION */
+.section--nopadding {
+  padding-top: 0px;
+}
+.container__subtitle {
+  margin-top: 0px;
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+.about__list {
+  display: flex;
+}
+.about__item + .about__item {
+  margin-left: 30px;
+}
+.about__item {
+  position: relative;
+}
+.about__image {
+  display: block;
+}
+
+.sub {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: var(--sub-color);
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+.sub__title {
+  margin: 0px;
+  padding: 0px;
+  color: #ffff;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}

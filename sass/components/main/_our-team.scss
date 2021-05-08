@@ -1,0 +1,70 @@
+/* OUR TEAM SECTION */
+.section--bgrey {
+  background-color: var(--background-color);
+}
+.card {
+  display: flex;
+}
+.card__item {
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--main-title);
+}
+
+.card__item + .card__item {
+  margin-left: 30px;
+}
+.team-card {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.team-card__name {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-transform: none;
+}
+
+.profession {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.71;
+}
+.socialnet {
+  display: flex;
+  padding-left: 0px;
+  justify-content: center;
+}
+
+.socialnet__item + .socialnet__item {
+  margin-left: 10px;
+}
+.socialnet__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  margin-left: 0px;
+  border-radius: 50px;
+
+  color: var(--icon-color);
+  transition: var(--animation), var(--bganimation);
+
+  &:hover,
+  &:focus {
+    color: #ffff;
+    background-color: var(--accent-color);
+  }
+}
+
+.socialnet__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}

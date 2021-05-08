@@ -1,0 +1,42 @@
+/* DESCRIPTION SECTION */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.describe {
+  display: flex;
+  justify-content: center;
+}
+.describe__item + .describe__item {
+  margin-left: 30px;
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  height: 120px;
+  width: 270px;
+  background-color: var(--background-color);
+  margin-bottom: 30px;
+}
+.thumb__icon {
+  height: 70px;
+  width: 70px;
+}
+.thumb__title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.thumb__text {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.71;
+}
