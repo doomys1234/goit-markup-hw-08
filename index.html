@@ -21,6 +21,7 @@
       <div class="container header__container">
         <a href="" class="container__link"><span class="container-logo">Web</span>Studio</a>
         <nav class="navigation">
+      
           <ul class="navigation__list">
             <li class="navigation__item">
               <a href="" class="navigation__link navigation__link--current">Студия</a>
@@ -30,6 +31,14 @@
             </li>
             <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
           </ul>
+          <button class="navigation__button is-open" type="button" aria-expanded="false" data-menu-button>
+            <svg class="navigation__icon" width="24" height="16" aria-label="Переключатель мобильного меню">
+              <use class="navigation__icon--close" href="./images/icons.svg#icon-close"></use>
+              <use class="navigation__icon--menu" href="./images/icons.svg#icon-menu"></use>
+              </svg>
+              
+            
+          </button>
         </nav>
 
         <ul class="contacts">
@@ -564,6 +573,7 @@
 
       </div>
     </footer>
+    <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__button" data-modal-close>

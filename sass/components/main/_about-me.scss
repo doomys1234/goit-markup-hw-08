@@ -1,5 +1,8 @@
 /* ABOUT ME SECTION */
 .section--nopadding {
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
   padding-top: 0px;
 }
 .container__subtitle {

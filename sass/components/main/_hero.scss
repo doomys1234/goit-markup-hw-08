@@ -25,13 +25,22 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  width: 696px;
+
   color: var(--main-title);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    width: 360px;
+    font-size: 26px;
+    line-height: 1.61;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 .hero__button {
   display: inline-block;
