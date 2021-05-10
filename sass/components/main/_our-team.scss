@@ -1,8 +1,5 @@
 /* OUR TEAM SECTION */
 .section--bgrey {
-  @media screen and (max-width: 1200px) {
-    padding-top: 60px;
-  }
   background-color: var(--background-color);
 }
 .card {
@@ -10,7 +7,7 @@
   @media screen and (max-width: 767px) {
     display: block;
   }
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-wrap: wrap;
     margin: -15px;
   }
@@ -26,13 +23,12 @@
     }
   }
   background-color: var(--main-title);
-  @media screen and (min-width: 768px) and (max-width: 1200px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin: 15px;
     flex-basis: calc((100% - 4 * 15px) / 2);
   }
 }
-.card__item img {
-  margin: 0px;
+.card__image {
   width: 100%;
 }
 @media screen and (min-width: 1200px) {
