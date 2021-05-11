@@ -98,6 +98,10 @@
   line-height: 1.71;
   margin-bottom: 30px;
   color: var(--text-color);
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: 1.16;
+  }
 }
 .form-label_input {
   -webkit-appearance: none;

@@ -1,53 +1,24 @@
 /* HEADER */
 .header {
-  position: relative;
   border: 1px solid #ececec;
+  @media screen and (max-width: 767px) {
+    height: 90px;
+  }
 }
+
 .header__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
-.container__link {
-  margin-right: 91px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  font-family: var(--secondary-font);
-  color: black;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-
-  @media screen and (min-width: 768px) {
-    margin-right: 88px;
-  }
-}
-
-.container-logo {
-  color: var(--accent-color);
-}
-.container-nav {
-  display: none;
-  position: absolute;
-  padding: 48px 40px;
-  background-color: white;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  &.is-open {
+.navigation__list {
+  display: flex;
+  letter-spacing: 0.02em;
+  @media screen and (max-width: 767px) {
     display: block;
   }
 }
-.navigation__list {
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    margin-bottom: 302px;
-  }
-  @media screen and (min-width: 768px) {
-    display: flex;
-  }
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and(max-width:767px) {
   .navigation__item:not(:last-child) {
     margin-bottom: 32px;
   }
@@ -58,64 +29,132 @@
     margin-left: 50px;
   }
 }
+
+.container__link {
+  margin-right: 91px;
+  font-family: var(--secondary-font);
+  color: black;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 21px;
+    padding-top: 21px;
+  }
+}
+
+.container-logo {
+  color: var(--accent-color);
+}
+
 .navigation__link {
   position: relative;
   display: block;
+  color: inherit;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  transition: var(--animation);
+  @media screen and (max-width: 767px) {
+    padding: 0px;
+    font-size: 40px;
+    line-height: 1.17;
+  }
+}
+
+.navigation__link:hover,
+.navigation__link:focus {
+  color: var(--accent-color);
+}
+@media screen and (max-width: 767px) {
+  .navigation__link--margin {
+    margin-bottom: 306px;
+  }
+}
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: auto;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+.contacts__link {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: var(--animation);
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 0px;
+  }
 
   &:hover,
   &:focus {
     color: var(--accent-color);
   }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    padding: 0px;
-  }
-  @media screen and (max-width: 767px) {
-    font-size: 40px;
-    line-height: 1.17;
-  }
 }
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .navigation__link--current {
-    color: var(--accent-color);
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts__item:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
-.navigation__link--current::after {
-  @media screen and (min-width: 767px) {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--accent-color);
-  }
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contacts__icon--envelope {
+  width: 16px;
+  height: 12px;
+}
+
+.contacts__icon--tel {
+  width: 10px;
+  height: 16px;
 }
 
 .navigation__link--modal {
   display: block;
-  margin-bottom: 64px;
-  font-size: 24px;
+  font-size: 34px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
 .different-color {
+  margin-top: 32px;
+  font-size: 24px;
   color: var(--text-color);
 }
 .modal-list {
   display: flex;
+  margin-top: 64px;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
+
 .modal-list__item {
   &:not(:last-child) {
     border-right: 1px solid rgba(33, 33, 33, 0.2);
@@ -128,12 +167,32 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.container-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    padding: 48px 40px;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 796px;
+  }
+}
+
+.container-nav.is-open {
+  display: block;
 }
 
 .navigation__button {
   position: absolute;
-  top: 10px;
-  right: 15px;
+  top: 22px;
+  right: 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,27 +224,6 @@
   display: none;
 }
 
-.contacts {
-  margin-left: auto;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contacts__item:not(:last-child) {
-    margin-bottom: 10px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .contacts__item + .contacts__item {
-    margin-left: 50px;
-  }
-}
-
 .contacts__link {
   color: var(--text-color);
   font-weight: 500;
@@ -206,18 +244,22 @@
     color: var(--accent-color);
   }
 }
-
-.contacts__icon {
-  margin-right: 10px;
-  fill: currentColor;
+@media screen and (min-width: 768px) {
+  .navigation__link--current::after {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--accent-color);
+  }
 }
 
-.contacts__icon--envelope {
-  width: 16px;
-  height: 12px;
-}
-
-.contacts__icon--tel {
-  width: 10px;
-  height: 16px;
+@media screen and (min-width: 1200px) {
+  .contacts__item + .contacts__item {
+    margin-left: 50px;
+  }
 }
