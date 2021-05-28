@@ -85,7 +85,7 @@ a {
 
 @media screen and (max-width: 767px) {
   .header {
-    height: 90px;
+    position: relative;
   }
 }
 
@@ -128,8 +128,15 @@ a {
 
 @media screen and (max-width: 767px) {
   .container__link {
-    padding-bottom: 21px;
-    padding-top: 21px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container__link {
+    padding-top: 26px;
+    padding-bottom: 26px;
   }
 }
 
@@ -160,12 +167,6 @@ a {
 .navigation__link:hover,
 .navigation__link:focus {
   color: var(--accent-color);
-}
-
-@media screen and (max-width: 767px) {
-  .navigation__link--margin {
-    margin-bottom: 306px;
-  }
 }
 
 @media screen and (max-width: 767px) {
@@ -255,6 +256,7 @@ a {
 
 .modal-list {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 64px;
 }
 
@@ -286,26 +288,29 @@ a {
   .container-nav {
     display: none;
     position: absolute;
+    z-index: 999;
     padding: 48px 40px;
     background-color: white;
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 796px;
+    height: 100vh;
   }
 }
 
 .container-nav.is-open {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navigation__button {
   position: absolute;
+  z-index: 999;
   top: 22px;
   right: 23px;
   display: flex;
   justify-content: center;
-  align-items: center;
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -360,6 +365,12 @@ a {
   color: var(--accent-color);
 }
 
+@media screen and (max-width: 767px) {
+  .navigation__link--current {
+    color: var(--accent-color);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .navigation__link--current::after {
     position: absolute;
@@ -388,7 +399,6 @@ a {
 .hero__overlay {
   padding-top: 200px;
   padding-bottom: 200px;
-  height: 600px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
@@ -397,6 +407,13 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (max-width: 1199px) {
+  .hero__overlay {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 
 .hero__title {
@@ -410,7 +427,7 @@ a {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1199px) {
   .hero__title {
     width: 360px;
     font-size: 26px;
@@ -562,6 +579,13 @@ a {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .container__subtitle {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 .about__list {
@@ -842,6 +866,7 @@ a {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-wrap {
     margin-left: 76px;
+    text-align: center;
   }
 }
 
@@ -1286,6 +1311,12 @@ a {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .examples {
+    margin-bottom: 50px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .examples__item:not(:last-child) {
     margin-right: 8px;
@@ -1329,7 +1360,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio {
     margin-top: -30px;
     margin-left: -30px;
@@ -1338,14 +1369,22 @@ a {
 
 .portfolio__item {
   transition: var(--shdow-animation);
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio__item {
-    width: calc((100% - 2 * 30px) / 2);
+    width: calc(100% / 2 - 30px);
     margin-top: 30px;
     margin-left: 30px;
-    height: 440px;
   }
 }
 
@@ -1418,9 +1457,6 @@ a {
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 
 .portfolio__title {

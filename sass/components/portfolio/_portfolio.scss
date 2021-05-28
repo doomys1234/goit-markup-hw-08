@@ -11,6 +11,9 @@
   @media screen and (max-width: 1199px) {
     margin-bottom: 30px;
   }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 @media screen and (max-width: 767px) {
   .examples__item:not(:last-child) {
@@ -50,7 +53,7 @@
   @media screen and (max-width: 767px) {
     display: block;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-top: -30px;
     margin-left: -30px;
   }
@@ -58,12 +61,20 @@
 
 .portfolio__item {
   transition: var(--shdow-animation);
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: calc((100% - 2 * 30px) / 2);
+    width: calc(100% / 2 - 30px);
     margin-top: 30px;
     margin-left: 30px;
-    height: 440px;
   }
   @media screen and (min-width: 1200px) {
     margin-right: 30px;
@@ -129,9 +140,6 @@
   padding-left: 24px;
   padding-right: 24px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
 }
 .portfolio__title {
   margin-top: 0px;
